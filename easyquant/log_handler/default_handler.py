@@ -2,7 +2,7 @@ import os
 import sys
 
 import logbook
-from logbook import Logger, StreamHandler, FileHandler
+from logbook import Logger, StreamHandler, FileHandler, TimedRotatingFileHandler
 
 logbook.set_datetime_format('local')
 
@@ -24,7 +24,8 @@ class DefaultLogHandler(object):
         if log_type == 'file':
             if os.path.isdir(filepath) and not os.path.exists(filepath):
                 os.makedirs(os.path.dirname(filepath))
-            file_handler = FileHandler(filepath, level=loglevel)
+            #file_handler = FileHandler(filepath, level=loglevel)
+            file_handler = TimedRotatingFileHandler(filepath,level=loglevel)
             self.log.handlers.append(file_handler)
 
     def __getattr__(self, item, *args, **kwargs):

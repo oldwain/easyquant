@@ -1,6 +1,10 @@
 account.session
+strategies/at_cho.py
+at_main.py
 yjb_account.json
 account.json
+xq.json
+yjb.json
 .idea
 .ipynb_checkpoints
 Untitled.ipynb
@@ -14,6 +18,7 @@ account.json
 tmp/
 log/
 
+*.bak
 # Distribution / packaging
 .Python
 env/
@@ -65,3 +70,5 @@ docs/_build/
 # PyBuilder
 target/
 vcode
+xq.json
+xq.json
